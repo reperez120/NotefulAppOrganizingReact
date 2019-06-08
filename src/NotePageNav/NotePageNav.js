@@ -1,5 +1,5 @@
 import React from 'react';
-import CircleButton from '../CircleButton/CircleButton';
+import AddButton from '../AddButton/AddButton';
 import ApiContext from '../ApiContext';
 import { findNote, findFolder } from '../notes-helpers';
 import NotefulError from '../NotefulError';
@@ -24,7 +24,7 @@ export default class NotePageNav extends React.Component {
     return (
       <div className='NotePageNav'>
       <NotefulError>
-        <CircleButton
+        <AddButton
           tag='button'
           role='link'
           onClick={() => this.props.history.goBack()}
@@ -32,7 +32,7 @@ export default class NotePageNav extends React.Component {
         >
           <br />
           Back
-        </CircleButton>
+        </AddButton>
         {folder && (
           <h3 className='NotePageNav__folder-name'>
             {folder.name}
